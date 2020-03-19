@@ -19,7 +19,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.android.navigation.TitleFragment">
+    tools:context="com.androidshowtime.android.navigation.TitleFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/titleConstraint"
@@ -31,20 +31,51 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/horizontal_margin"
+            android:layout_marginTop="68dp"
             android:layout_marginEnd="@dimen/horizontal_margin"
             android:paddingStart="@dimen/button_padding"
             android:paddingEnd="@dimen/button_padding"
-            android:text="Play"
+            android:text="@string/Play_Text"
             android:textColor="@color/colorAccent"
             android:textSize="@dimen/button_text_size"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/rulesButton"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/titleImage" />
 
+        <Button
+            android:id="@+id/rulesButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rules"
+            android:textSize="@dimen/button_text_size"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/aboutButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/playButton" />
+
+        <Button
+            android:id="@+id/aboutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/about"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:textSize="@dimen/button_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rulesButton" />
+
         <ImageView
             android:id="@+id/titleImage"
+            android:contentDescription="@string/title_image_text"
             android:layout_width="0dp"
             android:layout_height="@dimen/image_header_height"
             android:layout_marginStart="@dimen/horizontal_margin"

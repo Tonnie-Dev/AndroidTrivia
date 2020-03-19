@@ -13,14 +13,16 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
+<layout
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.androidshowtime.android.navigation.RulesFragment">
+<ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
-    tools:context="com.example.android.navigation.RulesFragment">
+    android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -33,6 +35,7 @@
             android:layout_marginStart="@dimen/horizontal_margin"
             android:layout_marginTop="@dimen/vertical_margin"
             android:layout_marginEnd="@dimen/horizontal_margin"
+            android:contentDescription="@string/title_android_trivia_question"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -50,5 +53,21 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/rulesImage" />
+
+        <Button
+            android:id="@+id/buttonPlayRules"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:textStyle="bold"
+            android:text="@string/Play_Text"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </ScrollView>
+    </layout>
