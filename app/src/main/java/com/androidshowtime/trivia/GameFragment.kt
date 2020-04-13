@@ -146,7 +146,7 @@ class GameFragment : Fragment() {
                 "The base URI for the web service, and a converter factory",
                 "The base URI for the web service, and a GET query",
                 "A network connection to the web service and an authorizatin toke",
-                "A converter factory, and a parser for the response"
+                "A converter factory and a parser for the response"
             )
         )
 
