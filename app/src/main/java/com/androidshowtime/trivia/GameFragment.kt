@@ -461,7 +461,10 @@ class GameFragment : Fragment() {
             )
         ),
         //Q.40
-        Question(text = "", answers = listOf()),
+        Question(
+            text = "Android is licenced under which open source licencing license?",
+            answers = listOf("Gnu's GPL", "Apache/MIT", "OSS", "Sourceforge")
+        ),
         //Q.41
         Question(text = "", answers = listOf()),
         //Q.42
