@@ -466,11 +466,10 @@ class GameFragment : Fragment() {
             answers = listOf("Gnu's GPL", "Apache/MIT", "OSS", "Sourceforge")
         ),
         //Q.41
-        Question(text = "", answers = listOf()),
+        Question(text = "What Layout should you use in your XML to hold your game view", answers = listOf("FrameLayout", "LinearLayout", "RelativeLayout", "TableLayout")),
         //Q.42
-        Question(text = "", answers = listOf()),
-        //Q.43
         Question(text = "", answers = listOf())
+        //Q.4876`        Question(text = "", answers = listOf())
     )
 
 
