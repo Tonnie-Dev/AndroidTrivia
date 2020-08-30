@@ -466,9 +466,15 @@ class GameFragment : Fragment() {
             answers = listOf("Gnu's GPL", "Apache/MIT", "OSS", "Sourceforge")
         ),
         //Q.41
-        Question(text = "What Layout should you use in your XML to hold your game view", answers = listOf("FrameLayout", "LinearLayout", "RelativeLayout", "TableLayout")),
+        Question(
+            text = "What Layout should you use in your XML to hold your game view",
+            answers = listOf("FrameLayout", "LinearLayout", "RelativeLayout", "TableLayout")
+        ),
         //Q.42
-        Question(text = "", answers = listOf())
+        Question(
+            text = "Which method is used to initiate a fragment",
+            answers = listOf("onViewCreate()", "onCreateView()", "onCreate()", "onAttach()")
+        )
         //Q.4876`        Question(text = "", answers = listOf())
     )
 
