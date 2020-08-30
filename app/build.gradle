@@ -9,22 +9,16 @@ android {
     compileSdkVersion "android-R"
 
 
-    dataBinding {
 
-        enabled = true
-    }
-
-    // this is to resolve the Binding classes not resolved error
-    viewBinding.enabled = true
 
 
     defaultConfig {
         applicationId "com.androidshowtime.trivia"
-        minSdkVersion 15
+        minSdkVersion 19
         targetSdkVersion 29
         vectorDrawables.useSupportLibrary = true
-        versionCode 2
-        versionName "1.1.0"
+        versionCode 3
+        versionName "1.1.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -33,6 +27,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+     buildFeatures {
+             //for data binding - default is false
+             dataBinding = true
+
+             //for vieBinding - default is true
+             viewBinding = true
+         }
 }
 
 dependencies {
@@ -41,18 +43,17 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
     // implementation "androidx.appcompat:appcompat:$supportlibVersion"
     implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta4'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta7'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.13'
-    androidTestImplementation 'androidx.test:runner:1.3.0-alpha05'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0-alpha05'
+    androidTestImplementation 'androidx.test:runner:1.3.0-rc01'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0-rc01'
 
 
-    implementation "com.google.android.material:material:1.2.0-alpha05"
-    //implementation "com.google.android.material:material:$supportlibVersion"
-    implementation "com.google.android.material:material:1.2.0-alpha05"
+
+    implementation 'com.google.android.material:material:1.3.0-alpha01'
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 
-    //implementation 'androidx.databinding:databinding-common:4.1.0-alpha03'
+    
 }

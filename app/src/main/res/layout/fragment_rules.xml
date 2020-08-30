@@ -51,6 +51,7 @@
                 android:layout_marginEnd="@dimen/horizontal_margin"
                 android:text="@string/rules_text"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:fontFamily="@font/advent_pro_medium"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/rulesImage" />

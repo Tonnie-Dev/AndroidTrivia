@@ -49,6 +49,7 @@
             android:id="@+id/rulesButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:includeFontPadding="false"
             android:text="@string/rules"
             android:textColor="@color/colorAccent"
             android:textSize="@dimen/button_text_size"

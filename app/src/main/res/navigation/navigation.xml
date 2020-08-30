@@ -28,13 +28,11 @@
         <action
             android:id="@+id/action_gameFragment_to_gameOverFragment"
             app:destination="@id/gameOverFragment2"
-            app:popUpTo="@+id/gameFragment"
-            app:popUpToInclusive="true" />
+            app:popUpTo="@id/titleFragment" />
         <action
             android:id="@+id/action_gameFragment_to_gameWonFragment"
             app:destination="@id/gameWonFragment"
-            app:popUpTo="@+id/gameFragment"
-            app:popUpToInclusive="true" />
+            app:popUpTo="@id/titleFragment" />
     </fragment>
     <fragment
         android:id="@+id/gameOverFragment2"
@@ -44,8 +42,7 @@
         <action
             android:id="@+id/action_gameOverFragment_to_gameFragment"
             app:destination="@id/gameFragment"
-            app:popUpTo="@+id/titleFragment"
-            app:popUpToInclusive="false" />
+            app:popUpTo="@id/titleFragment" />
     </fragment>
     <fragment
         android:id="@+id/gameWonFragment"
@@ -55,8 +52,7 @@
         <action
             android:id="@+id/action_gameWonFragment_to_gameFragment"
             app:destination="@id/gameFragment"
-            app:popUpTo="@+id/gameFragment"
-            app:popUpToInclusive="false" />
+            app:popUpTo="@id/titleFragment" />
         <argument
             android:name="numQuestions"
             app:argType="integer" />

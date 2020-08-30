@@ -5,9 +5,9 @@ import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.*
-import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.androidshowtime.trivia.databinding.FragmentTitleBinding
 
@@ -46,14 +46,21 @@ class TitleFragment : Fragment() {
     ): View? {
 
 
-        val binding: FragmentTitleBinding = DataBindingUtil.inflate(
-            inflater, R.layout
-                .fragment_title, container, false
-        )
+        val binding = FragmentTitleBinding.inflate(inflater)
 
-        binding.playButton.setOnClickListener { v ->
-            v.findNavController()
+        /*  val binding: FragmentTitleBinding = DataBindingUtil.inflate(
+              inflater, R.layout
+                  .fragment_title, container, false
+          )*/
+
+        binding.playButton.setOnClickListener {
+
+            this.findNavController()
                 .navigate(TitleFragmentDirections.actionTitleFragmentToGameFragment())
+            /* v ->
+             v.findNavController()
+                 .navigate(TitleFragmentDirections.actionTitleFragmentToGameFragment())*/
+
         }
 
         binding.rulesButton.setOnClickListener { v ->
